@@ -1,0 +1,21 @@
+
+.main-block{
+    display: block;
+    text-align: center;
+    margin: 10px;
+    
+} 
+
+.interest{
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+
+.footer{
+    display: block;
+    text-align: center;
+    margin: 10px;
+    
+} 

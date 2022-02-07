@@ -65,7 +65,7 @@ header .form .input2{
 
 header .form .input i{
     background-color: #FFF;
-    color: #666;
+    color: black;
     width: 10px;
     height: 10px;
     position: absolute;
@@ -95,11 +95,13 @@ header ul li a{
    text-align: center;
 }
 
-div.burger-menu{
+div.burger-menu, input[type="checkbox"]{
     text-align: center;
 }
 
-div.burger-menu i{
+
+
+div.burger-menu i, input[type="checkbox"]{
     background-color: blue;
     border-radius: 5px;
     color:white;
@@ -152,7 +154,7 @@ main section article img{
 main section .flex-container{
     display: flex;
     right: 20px;
-    top: -15px;
+    top: 0px;
     position: absolute;
     font-size: 16px;
     color: #39b54a;
@@ -179,11 +181,17 @@ main section .flex-container{
 
 
 article div.artprincipal{
-    width:100%;
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
-    position: relative;
+        width: 100%;
+        border-top: 1px solid #ebebeb;
+        padding: 15px;
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+        transition: all .3s;
+    }
 
+article div.artprincipal:hover {
+    height: 100px;
 }
 
 .products{
@@ -191,14 +199,29 @@ article div.artprincipal{
     flex-wrap: wrap;
 }
 
+.navigation a.icon{
+    display: block;
+}
+
+.navigation a{
+    display: block;
+}
+
+.footer{
+    display: block;
+    text-align: center;
+    margin: 10px;
+    
+} 
+
 
 
 @media (min-width: 320px){
-    main section article .descripcion{
+    main section article .descripcion {
         display: block;
     }
 
-    main section article{
+    main section article:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
@@ -233,6 +256,13 @@ article div.artprincipal{
         width:  22%;
         margin: 3px
     }
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
     div.top-header {
         display: inline;
         align-items: center;
@@ -293,6 +323,47 @@ article div.artprincipal{
         color: black;
         margin-bottom: 10px;
         margin-right: 20px;
+    }
+
+    main section .flex-container {
+        display: flex;
+        right: 8px;
+        top: -15px;
+        position: absolute;
+        font-size: 16px;
+        color: #39b54a;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-precio-desc .descuentos {
+        width: 70%;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+
+    .flex-precio-desc .precio {
+        width: 15%;
+    }
+
+    .flex-precio-desc .descuentos {
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 50px;
+        margin-top: 5px;
+
+    }
+
+    p {
+        font-size: 13px;
     }
 
 }

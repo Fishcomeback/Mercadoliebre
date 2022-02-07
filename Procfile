@@ -1,2 +1,2 @@
 web: node app.js
-web: node ./Procfilec/app.js
+web: node /site/app.js
